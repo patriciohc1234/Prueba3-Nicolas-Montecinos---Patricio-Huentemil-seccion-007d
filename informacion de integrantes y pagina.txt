@@ -1,0 +1,4 @@
+Nombre De Integrantes: Patricio Huentemil, Nicolas Montecino
+User: superusuventas
+Pass: passventas
+Ambiente Virtual: ambiente_virtual_tienda

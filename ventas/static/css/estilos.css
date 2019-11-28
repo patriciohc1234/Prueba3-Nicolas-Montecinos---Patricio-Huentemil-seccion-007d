@@ -1,0 +1,330 @@
+@import url(http//fonts.googleapis.com/css?family=Open+Sans);
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    background-image: linear-gradient(rgb(38, 0, 255), rgb(172, 4, 102));
+   
+}
+
+header{
+    width: 100%;
+    height: 50px;
+    background: #000000af; /*Cambiar colores despues */
+    color: rgb(255, 255, 255);
+    position: fixed; /* quedar pegado el menu */
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.contenedor{
+    width: 98%;
+    margin: auto;
+}
+
+
+h1{
+   float: left;  
+  /* text-align: center; */
+}
+
+header .contenedor{
+    display: table;
+}
+
+/*-----MENU----*/
+
+#menu-bar{
+    display: none;
+}
+
+header label{  /*icono rig*/
+    float: right; /*right */
+    font-size: 28px;
+    margin: 6px 0;  /*6px 0 */
+    cursor: pointer;
+}
+
+.btn {
+    background-color: rgb(44, 106, 221);
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+  }
+
+.menu{
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 50%;
+    height: 25vh; /*tamaño del meno el fondo negro del menu */
+    background: 437983;
+    transition: all 0.5s;
+    transform: translateX(-100%);
+}
+
+.menu a{
+    display: block;
+    color: rgb(255, 255, 255);
+    height: 50px;
+    text-decoration: none;
+    padding: 15px;
+    border-bottom: 1px solid rgb(255, 255, 255,0.5);
+}
+
+.menu a:hover{
+    background: rgb(255, 255, 255,0.3);
+}
+
+#menu-bar:checked ~ .menu{
+    transform: translateX(-0%);
+}
+
+
+@media (min-width: 1024px) {
+
+    h1{
+        text-align: initial;
+    }
+    /* prueba*/
+    .menu {
+        position: static;
+        width: auto;
+        height: auto;
+        transform: translateX(0%);
+        float: right;
+        display: flex;
+    }
+
+    .menu a {
+        border: none;
+    }
+    
+
+    header label {
+        display: none;
+    }
+
+}
+
+
+/*-----MAIN----*/
+
+#Bienvenidos{
+    text-align: center;
+    margin-bottom: 40px; /*separar el bienvenido con info */
+    margin-top: 31px; /*---Prueba---*/
+    color: rgb(212, 157, 106);
+}
+
+/*----Estilo de info---- */
+
+.info__columna{
+    background: #198efb;
+    color: white;
+    padding: 15px;
+    margin-bottom: 30px; /*para separar las infos */
+
+}
+
+.info__img{
+    margin: auto;
+    display: block;
+}
+
+/*-----Estilo de cursos-----*/
+
+ .section__titulo{
+    text-align: center;
+    font-size: 40px;
+    color: #198efb;
+}
+
+.cursos__columna{
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.cursos__descripcion{
+    position: absolute;
+    border-radius: 8px; 
+    top:0;
+    left:0;
+    color: white;
+    background: rgb(0, 0, 0,0.5);
+    width: 30%;
+    height: 99%; /*el fondo de atras del curso */
+    padding: 5px;
+}
+
+.cursos_titulo{
+    font-size: 25px;
+    margin: 5px 0;
+}
+
+.cursos__img{
+    width: 70%;  
+    border-radius: 8px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+}
+
+/*Cambiar el titulo del banner de h1 a h2 */
+
+/*----Estilo de footer--- */
+footer{
+    background: rgba(0, 0, 0, 0.712);
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+footer .social [class^="icon-"]{
+    display: inline-block;
+    color:#333;
+    text-decoration: none;
+    font-size: 30px;
+    padding: 10px;
+    background: white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    line-height: 40px;
+}
+
+/*------Responsive----- */
+
+@media screen and (min-width:480px){
+    .info, .cursos{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .info__columna{
+        width: 32%;
+    }
+
+    .info__titulo{
+        font-size: 30px;
+        margin: 5px 0;
+    }
+
+    .cursos{
+        flex-wrap: wrap;
+        margin-top: 0;
+    }  
+
+    .section__titulo{
+        width: 100%; 
+    }
+
+    .cursos__columna{
+        width: 49%;
+    }
+
+    .footer .social [class^="icon-"]{
+        margin: 0 10px;
+    }
+
+}
+
+@media(min-width:768px){
+    .cursos_titulo{
+        font-size: 40px;
+    }
+}
+
+@media(min-width:1024px){
+
+    .contenedor{
+        width: 1000px; /*Arreglar contenedor de cursos*/
+    }
+    .cursos_titulo{
+        font-size: 50px;
+    }
+
+    .info__titulo{
+        text-align: center;
+        font-size: 40px;
+    }
+
+    .section__titulo{
+        font-size: 50px;
+        margin: 30px 0;
+    }
+
+    .cursos__descripcion{
+        padding: 20px; /*puedo borrar hacia abajo */
+        /*
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        */
+    }
+
+    .cursos__txt{
+        font-size: 20px;
+    }
+
+    .info__columna{
+        padding: 30px;
+    }
+
+}
+
+@media(min-width:1280px){
+    .contenedor{
+        width: 1200px;
+    }
+
+}
+
+/* Contacto*/
+
+input[type=text], select, textarea {
+    width: 100%; 
+    padding: 12px;
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    box-sizing: border-box;
+    margin-top: 6px; 
+    margin-bottom: 16px; 
+    resize: vertical 
+  }
+  
+
+  input[type=submit] {
+    background-color: rgb(172, 76, 175);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+
+  input[type=submit]:hover {
+    background-color: #9d45a0;
+  }
+  /* color del container */
+  .container {
+    border-radius: 5px;
+    background-color: #ff990046;
+    padding: 20px;
+  }
+

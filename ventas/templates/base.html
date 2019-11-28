@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  {% block title %}<title>Tienda Streetwear</title>{% endblock %}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://file.myfontastic.com/K2Hqyt9UZyx6J7D9gx4cYM/icons.css" rel="stylesheet">
+  <!-- Add additional CSS in static file -->
+  {% load static %}
+
+  <link rel="stylesheet" href="{% static 'css/estilos.css'%}">
+  <link rel="stylesheet" href="{% static 'css/carrusel.css'%}">
+  <link rel="stylesheet" href="{% static 'css/main.css'%}">
+  <script src="{% static 'js/jquery-3.1.0.min.js'%}"></script>
+  <script src="{% static 'js/carrito.js'%}"></script>
+  <script src="{% static 'js/main.js'%}"></script>
+
+
+
+  </head>
+    <body>
+    <header>
+    <div class="contenedor">
+      <h1 class="icono-ropa">Tienda Streetwear</h1>
+      <input type="checkbox" id="menu-bar">
+      <label class="icon-menu" for="menu-bar"></label>
+    
+      {% block sidebar %}
+      <nav class="menu">
+        <li><a href="{% url 'index' %}">Tienda de ropa</a></li>
+        <li><a href="{% url 'signup' %}">Registrase</a></li>
+          <li><a href="{% url 'catalogo' %}">Productos</a></li>
+          <li><a href="{% url 'crear' %}">Crear productos</a></li>
+          <li><a href="{% url 'editar' %}">Editar productos</a></li>
+      </nav>
+    </div>
+    </header>
+     {% endblock %}
+      </div>
+      
+      <div class="col-sm-10 ">
+      {% block content %}{% endblock %}
+      </div>
+    </div>
+   
+  </div>
+
+</body>
+</html>

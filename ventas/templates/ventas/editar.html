@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <div class="background-form">
+		<form method="POST" class="form">{% csrf_token %}
+			<h2><b>Modifica El Producto Seleccionado</b></h2>
+
+			<br>
+			<!-- Title -->
+        		<div>
+        			<h4>Nombre</h4>
+        			{{ form.title }}
+        		</div>
+
+			<!-- TEXT -->
+        		<div>
+        			<h4>Precio</h4>
+        			{{ form.precio }}
+        		</div>
+
+			<!-- RAZA -->
+        		<div>
+        			<h4>Descripcion</h4>
+        			{{ form.descripcion }}
+        		</div>
+
+        	<br>
+			<button type="submit" class="save btn btn-default" id="saveedit">Guardar Cambios</button>
+
+		</form>
+	</div>
+{% endblock %}
