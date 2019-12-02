@@ -2,15 +2,14 @@
 {% block content %}
 
 {% if form.errors %}
-<p>Your username and password didn't match. Please try again.</p>
+<p>Tu nombre o contraseña esta errada, porfavor intente nuevamente</p>
 {% endif %}
 
 {% if next %}
     {% if user.is_authenticated %}
-    <p>Your account doesn't have access to this page. To proceed,
-    please login with an account that has access.</p>
+    <p>Tu cuenta no tiene acceso a la web.</p>
     {% else %}
-    <p>Please login to see this page.</p>
+    <p>porfavor logearse para ver esta pagina.</p>
     {% endif %}
 {% endif %}
 

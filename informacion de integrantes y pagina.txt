@@ -1,4 +1,5 @@
 Nombre De Integrantes: Patricio Huentemil, Nicolas Montecino
 User: superusuventas
-Pass: passventas
+User PythonAnywhere: usupythonanywhere
+Pass Admin y Pythonanaywhere: passventas
 Ambiente Virtual: ambiente_virtual_tienda
