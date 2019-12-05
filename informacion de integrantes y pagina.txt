@@ -3,3 +3,6 @@ User: superusuventas
 User PythonAnywhere: usupythonanywhere
 Pass Admin y Pythonanaywhere: passventas
 Ambiente Virtual: ambiente_virtual_tienda
+Pagina pythonanywhere: http://tiendastreetwear.pythonanywhere.com/ 
+--Notas--
+Para un usuario comun primero se crea una cuenta en registrase y redirecciona hacia el login, el usuario admin es usupythonanywhere
